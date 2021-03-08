@@ -29,11 +29,8 @@ jobs:
       - name: Generating static files
         run: yarn build:prod
 
-      - name: Deploying to gh-pages
-        run: |
-          git config --local user.name osbuktp
-          git config --local user.email os.buktp@yandex.ru
-          git remote set-url origin https://github.com/$GITHUB_REPOSITORY
-          git add -f build
-          git commit -am "Build $GITHUB_RUN_ID"
-          git subtree push -f --prefix build origin gh-pages
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.0
+        with:
+          branch: gh-pages
+          folder: build
