@@ -17,7 +17,7 @@ const config: CmsConfig = {
         {
           label: "Home",
           name: "home",
-          file: "content/pages/home.md",
+          file: "/content/pages/home.md",
           fields: [
             {
               label: "Hero Title",
