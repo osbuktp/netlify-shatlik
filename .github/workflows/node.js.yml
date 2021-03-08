@@ -27,11 +27,12 @@ jobs:
       - run: yarn
 
       - name: Generating static files
-      - run: yarn build
-      - run: yarn export
+        run: yarn build
+      - name: Exporting static files
+        run: yarn export
 
       - name: Deploying to gh-pages
-      - run: |
+        run: |
           git config --local user.name osbuktp
           git config --local user.email os.buktp@yandex.ru
           git remote set-url origin https://github.com/${GITHUB_REPOSITORY}
