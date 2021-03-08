@@ -33,8 +33,8 @@ jobs:
         run: |
           git config --local user.name osbuktp
           git config --local user.email os.buktp@yandex.ru
-          git remote set-url origin https://github.com/${GITHUB_REPOSITORY}
+          git remote set-url origin https://github.com/$GITHUB_REPOSITORY
           git add build
-          git commit -am "Build ${GITHUB_RUN_ID}"
+          git commit -am "Build $GITHUB_RUN_ID"
           git subtree push -f --prefix build origin gh-pages
         working-directory: ./out
