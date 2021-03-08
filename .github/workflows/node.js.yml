@@ -39,4 +39,4 @@ jobs:
           git add .
           git commit -am "Build ${GITHUB_RUN_ID}"
           git push -f origin gh-pages
-        working directory: ./out
+        working-directory: ./out
