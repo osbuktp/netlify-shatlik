@@ -37,4 +37,3 @@ jobs:
           git add build
           git commit -am "Build $GITHUB_RUN_ID"
           git subtree push -f --prefix build origin gh-pages
-        working-directory: ./out
